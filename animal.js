@@ -1,13 +1,34 @@
-class Animal {
+class Home {
     constructor(name) {
         this.name = name;
+        this.array = [];
+    }
+    adoptPet() {
+        this.array += this.name;
+    }
+    makeAllSounds() {
+        if (this.array == dog1 || this.array == dog2) {
+            console.log(dog.sounds());
+        }
+        else if (this.array == cat){
+            return cat.sounds();
+        }
+    }
+}
+
+class Animal extends Home {
+    constructor(name) {
+        super(name);
+    }
+    sound() {
+        console.log('sound...');
     }
     eat() {
         console.log(`${this.name} eats`);
     }
 }
 
-class Dog extends Animal {
+class Dog extends Home {
     constructor(name) {
         super(name);
         this.name = 'Rax';
@@ -17,7 +38,7 @@ class Dog extends Animal {
     }
 }
 
-class Cat extends Animal {
+class Cat extends Home {
     constructor(name) {
         super(name);
         this.name = 'Stormy';
@@ -27,13 +48,12 @@ class Cat extends Animal {
     }
 }
 
-var dog = new Dog();
-
-dog.eat();
-dog.sounds();
-
+var home = new Home();
+var dog1 = new Dog();
+var dog2 = new Dog();
 var cat = new Cat();
 
-cat.eat();
-cat.sounds();
 
+home.makeAllSounds();
+home.adoptPet(dog1);
+home.makeAllSounds();
