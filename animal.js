@@ -1,26 +1,8 @@
-class Home {
+class Animal {
     constructor(name) {
         this.name = name;
-        this.array = [];
     }
-    adoptPet() {
-        this.array += this.name;
-    }
-    makeAllSounds() {
-        if (this.array == dog1 || this.array == dog2) {
-            console.log(dog.sounds());
-        }
-        else if (this.array == cat){
-            return cat.sounds();
-        }
-    }
-}
-
-class Animal extends Home {
-    constructor(name) {
-        super(name);
-    }
-    sound() {
+    sounds() {
         console.log('sound...');
     }
     eat() {
@@ -28,7 +10,7 @@ class Animal extends Home {
     }
 }
 
-class Dog extends Home {
+class Dog extends Animal {
     constructor(name) {
         super(name);
         this.name = 'Rax';
@@ -38,7 +20,7 @@ class Dog extends Home {
     }
 }
 
-class Cat extends Home {
+class Cat extends Animal {
     constructor(name) {
         super(name);
         this.name = 'Stormy';
@@ -48,12 +30,35 @@ class Cat extends Home {
     }
 }
 
+let adoptedAnimals = [];
+
+class Home {
+    adoptPet(newPet) {
+        adoptedAnimals.push(newPet);
+    }
+
+    makeAllSounds() {
+        for (let i = 0; i < adoptedAnimals.length; i++) {
+            adoptedAnimals[i].sounds();
+        }
+    }
+}
+var dog = new Dog();
+
+dog.eat();
+dog.sounds();
+
+var cat = new Cat();
+
+cat.eat();
+cat.sounds();
+
 var home = new Home();
 var dog1 = new Dog();
 var dog2 = new Dog();
 var cat = new Cat();
 
-
-home.makeAllSounds();
 home.adoptPet(dog1);
+home.adoptPet(cat);
+home.adoptPet(dog2);
 home.makeAllSounds();
