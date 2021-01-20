@@ -1,0 +1,22 @@
+{
+  "name": "animal_oop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "animal.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ph1nd1/animal_OOP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ph1nd1/animal_OOP/issues"
+  },
+  "homepage": "https://github.com/Ph1nd1/animal_OOP#readme",
+  "dependencies": {
+    "jasmine": "^3.6.4"
+  }
+}

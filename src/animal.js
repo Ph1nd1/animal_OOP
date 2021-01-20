@@ -4,23 +4,23 @@ class Animal {
   }
 
   sounds() {
-    console.log("Animal Sounds");
+    return("Animal Sounds");
   }
 
   eat() {
-    console.log(`${this.name} eats`);
+    return(`${this.name} eats`);
   }
 }
 
 class Dog extends Animal {
   sounds() {
-    console.log(`Dog barks`);
+    return(`Dog barks`);
   }
 }
 
 class Cat extends Animal {
   sounds() {
-    console.log(`Cat meows`);
+    return(`Cat meows`);
   }
 }
 
@@ -35,7 +35,9 @@ class Home {
 
   makeAllSounds() {
     for (let i = 0; i < this.adoptedAnimals.length; i++) {
-      this.adoptedAnimals[i].sounds();
+      return this.adoptedAnimals[i].sounds();
     }
   }
 }
+
+module.exports = {Animal, Cat, Dog, Home}
