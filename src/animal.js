@@ -4,23 +4,39 @@ class Animal {
   }
 
   sounds() {
-    return("Animal Sounds");
+    let sound = "Animal Sounds";
+    console.log(sound);
+    return(sound);
   }
 
   eat() {
-    return(`${this.name} eats`);
+    let animalEat = `${this.name} eats`;
+    console.log(animalEat);
+    return(animalEat);
   }
 }
 
 class Dog extends Animal {
+  constructor(name) {
+    super(name);
+    this.name = "Rax";
+  }
   sounds() {
-    return(`Dog barks`);
+    let dogSound = "Dog barks";
+    console.log(dogSound);
+    return dogSound;
   }
 }
 
 class Cat extends Animal {
+  constructor(name) {
+    super(name);
+    this.name = "Stormy";
+  }
   sounds() {
-    return(`Cat meows`);
+    let catSound = `Cat meows`;
+    console.log(catSound);
+    return catSound;
   }
 }
 
@@ -35,6 +51,7 @@ class Home {
 
   makeAllSounds() {
     for (let i = 0; i < this.adoptedAnimals.length; i++) {
+      console.log(this.adoptedAnimals[i].sounds())
       return this.adoptedAnimals[i].sounds();
     }
   }

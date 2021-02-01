@@ -17,7 +17,7 @@ describe('Animal class', () => {
 describe('Cat class extended from Animal class', () => {
     let cat
     beforeEach(() => {
-        cat = new Cat('Stormy')
+        cat = new Cat()
     })
 
     it('should have a sounds method', () => {
@@ -31,11 +31,11 @@ describe('Cat class extended from Animal class', () => {
 describe('Dog class extended from Animal class', () => {
     let dog
     beforeEach(() => {
-        dog = new Cat('Rax')
+        dog = new Dog()
     })
 
     it('should have a sounds method', () => {
-        expect(dog.sounds()).toBe('Cat meows')
+        expect(dog.sounds()).toBe('Dog barks')
     })
     it('should inherit eat method', () => {
         expect(dog.eat()).toBe('Rax eats')
